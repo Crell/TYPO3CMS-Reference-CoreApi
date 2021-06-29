@@ -53,9 +53,7 @@ For extension authors, the API can be used for any custom feature provided by an
 
 To register a feature and set the default state, add the following to the :file:`ext_localconf.php`: of your extension::
 
-   if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['myFeatureName'])) {
-       $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['myFeatureName'] = true; // or false;
-   }
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['myFeatureName'] ??= true; // or false
 
 To check if a feature is enabled use this code::
 
